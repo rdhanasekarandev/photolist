@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sekar.ui.photoDetailView.PhotoDetailViewModel" />
+    </data>
+    <RelativeLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.photoDetailView.PhotoDetailActivity">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/albumId" />
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:id="@+id/id" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/albumId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:id="@+id/title" />
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/title"
+            android:scaleType="centerCrop"/>
+        <Button
+            android:id="@+id/favButton"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Add To Favourite"/>
+    </RelativeLayout>
+</layout>
